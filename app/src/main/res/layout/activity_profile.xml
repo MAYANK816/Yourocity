@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile"
+    android:background="#0077ff">
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="315dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="523dp"
+        android:layout_marginEnd="160dp"
+        android:backgroundTint="@color/white"
+        android:text="LogOut"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/contactUs"
+        android:layout_width="315dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="423dp"
+        android:layout_marginEnd="160dp"
+        android:backgroundTint="@color/white"
+        android:text="ContactUs"
+        android:onClick="ContactUs"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/ForgotPass"
+        android:layout_width="315dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="323dp"
+        android:layout_marginEnd="160dp"
+        android:backgroundTint="@color/white"
+        android:onClick="ContactUs"
+        android:text="Update Password"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="128dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.391"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user"
+        tools:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="167dp"
+        android:text="YourName"
+        android:textColor="#FFFFFF"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+    <TextView
+        android:id="@+id/usermail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="167dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="167dp"
+        android:text="YourEmail"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profileImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

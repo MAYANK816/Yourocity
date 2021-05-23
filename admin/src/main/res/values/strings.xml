@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">admin</string>
+    <string name="your_number">Your Number</string>
+    <string name="name">Name</string>
+    <string name="work_description_and_address">work Description and address</string>
+    <string name="your_email">Your Email !</string>
+    <string name="service_type">Service Type</string>
+    <string name="place_reuest">Place Reuest</string>
+    <string name="service">Service</string>
+</resources>

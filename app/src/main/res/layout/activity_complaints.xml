@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0077ff"
+    tools:context=".Complaints">
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Services"
+            android:textColor="@color/white"
+            style="@style/titleTextStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:text="Hello User"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+            app:layout_constraintEnd_toEndOf="@+id/textView2"
+            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintStart_toStartOf="@+id/textView2"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/home_bg"
+            android:elevation="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvUsername">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/menu"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profileCard"
+                    style="@style/cardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/home_card_height"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView2"
+                                    android:layout_width="@dimen/home_image_view_size"
+                                    android:layout_height="@dimen/home_image_view_size"
+                                    android:layout_marginStart="24dp"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/user" />
+
+                                <TextView
+                                    android:id="@+id/textView5"
+                                    style="@style/categoryHeadingTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="24dp"
+                                    android:text="Profile"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                                    app:layout_constraintStart_toEndOf="@+id/imageView2"
+                                    app:layout_constraintTop_toTopOf="@+id/imageView2" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/plumber"
+                    style="@style/cardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/home_card_height"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="plumber"
+                    app:layout_constraintEnd_toStartOf="@+id/Mechanic"
+                    app:layout_constraintStart_toStartOf="@+id/profileCard"
+                    app:layout_constraintTop_toBottomOf="@+id/profileCard">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView3"
+                                    android:layout_width="@dimen/home_image_view_size"
+                                    android:layout_height="@dimen/home_image_view_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.35"
+                                    app:srcCompat="@drawable/plumber" />
+
+                                <TextView
+                                    style="@style/categoryHeadingTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Plumber"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/Mechanic"
+                    style="@style/cardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/home_card_height"
+                    android:onClick="Mechanic"
+                    app:layout_constraintBottom_toBottomOf="@+id/plumber"
+                    app:layout_constraintEnd_toEndOf="@+id/profileCard"
+                    app:layout_constraintStart_toEndOf="@+id/plumber"
+                    app:layout_constraintTop_toTopOf="@+id/plumber">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView4"
+                                    android:layout_width="@dimen/home_image_view_size"
+                                    android:layout_height="@dimen/home_image_view_size"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.35"
+                                    app:srcCompat="@drawable/tools" />
+
+                                <TextView
+                                    style="@style/categoryHeadingTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Mechanic"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/techie"
+                    style="@style/cardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/home_card_height"
+                    android:layout_marginTop="16dp"
+                    android:onClick="compExpert"
+                    app:layout_constraintEnd_toEndOf="@+id/plumber"
+                    app:layout_constraintStart_toStartOf="@+id/plumber"
+                    app:layout_constraintTop_toBottomOf="@+id/plumber">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                                <ImageView
+                                    android:id="@+id/imageView5"
+                                    android:layout_width="@dimen/home_image_view_size"
+                                    android:layout_height="@dimen/home_image_view_size"
+                                    android:src="@drawable/expert"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.35" />
+
+                                <TextView
+                                    style="@style/categoryHeadingTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Techie"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/other"
+                    style="@style/cardViewStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/home_card_height"
+                    android:onClick="Others"
+                    app:layout_constraintBottom_toBottomOf="@+id/techie"
+                    app:layout_constraintEnd_toEndOf="@+id/Mechanic"
+                    app:layout_constraintStart_toStartOf="@+id/Mechanic"
+                    app:layout_constraintTop_toTopOf="@+id/techie">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:id="@+id/imageView6"
+                                    android:layout_width="@dimen/home_image_view_size"
+                                    android:layout_height="@dimen/home_image_view_size"
+                                    android:src="@drawable/others"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.35" />
+
+                                <TextView
+                                    style="@style/categoryHeadingTextStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="More Services"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
